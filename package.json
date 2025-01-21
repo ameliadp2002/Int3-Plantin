@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "vite --host --base=/INT3PLANTIN/",
+    "build": "vite build --base=/INT3PLANTIN/",
+    "preview": "vite preview --base=/INT3PLANTIN/"
   },
   "devDependencies": {
     "vite": "^6.0.5"
