@@ -1,3 +1,10 @@
+:root{
+  --color-primary: #F42E0A;
+  --color-secondary:#2CC5F4;
+  --color-background:#F3F3F3;
+  --color-opacity:70%;
+}
+
 html{
   box-sizing: border-box;
   
@@ -12,5 +19,19 @@ html{
   }
 
   body{
-    background-color: aqua;
+    background-color: var(--color-background);
   }
+
+ .circle {
+    --cursor-size: 150px;
+    position: fixed;
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    background-color: var(--color-primary);
+    opacity: 70%;
+    border-radius: 100%;
+    top: calc(-1 * var(--cursor-size) / 2);
+    left: calc(-1 * var(--cursor-size) / 2);
+    pointer-events: none;
+
+}
