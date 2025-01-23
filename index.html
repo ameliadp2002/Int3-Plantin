@@ -4,97 +4,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+    rel="stylesheet">
   <title>plantin</title>
 </head>
 
 <body>
+  <div class="container">
+    <header class="header">
+      <div class="circle"></div>
+      <div class="menu">
+        <ul class="menu__list">
+          <li><a class="menu__item" href="#start">Start</a></li>
+          <li><a class="menu__item" href="#paris">Paris</a></li>
+          <li><a class="menu__item" href="#family">Family</a></li>
+          <li><a class="menu__item" href="#workshop">workshop</a></li>
+          <li><a class="menu__item" href="#answer">Answer</a></li>
+        </ul>
+      </div>
+      <section class="header__content section" id="start">
+        <div class="header__img">
+          <img class="pilars" src="./assets/pilars_blue.svg" alt="pilars">
+          <img class="press" src="./assets/press_red.svg" alt="press">
+        </div>
+        <div class="header__text">
+          <h1 class="header__title">In the <span> print</span> <br> of the moment</h1>
+          <p class="header__sub">Was he a master craftsman or a master conspirator?</p>
+        </div>
+        <a class="header__button" href="#paris">start</a>
+    </header>
 
-  <header class="header">
-    <div class="circle"></div>
-    <div class="menu">
-      <ul>
-        <li><a class="menu__item" href="#">Start</a></li>
-        <li><a class="menu__item" href="#">Paris</a></li>
-        <li><a class="menu__item" href="#">Family</a></li>
-        <li><a class="menu__item" href="#">workshop</a></li>
-        <li><a class="menu__item" href="#">Anwser</a></li>
-      </ul>
-    </div>
-    <section class="header__content">
-      <h1 class="header__title">In the print of the moment</h1>
-      <p class="header__text">Was he a master craftsman or a master conspirator?</p>
-      <img class="header__img" src="./assets/pilars_blue.svg" alt="pilars">
-      <img class="header__img , red" src="./assets/press_red.svg" alt="press">
-      <button class="header__button">start</button>
-  </header>
+    <main class="main">
+      <section class="section paris" id="paris">
+        <div class="paris__intro">
+          <h2 class="main__title"><span>Shadows</span> of <br>the past</h2>
 
-  <main class="main">
-    <section class="main__content">
-      <h2 class="main__title">Shadows of the past</h2>
-      <p>I sit alone in my workshop, the smell of ink and parchment mingling with the faint chill of an Antwerp evening.
-        My fingers trace the worn grooves of my printing press, the very tool that has shaped my life – and nearly ended
-        it. The accusations still echo in my mind: Heretic, traitor. Words that burned hotter than the Spanish sun.</p>
-      <p>heritic</p>
-      <p>traitor</p>
-      <img class="main__img" src="./assets/plantin_blue.svg" alt="press">
-      <img class="main__img" src="./assets/plantin_red.svg" alt="press">
-      <p>It was not so long ago that I was forced to flee. A Calvinist pamphlet slipped unnoticed among my publications.
-        The Spanish authorities were swift, unforgiving. I left Antwerp for Paris, leaving behind my presses, my
-        livelihood…my family.</p>
-      <p>run away</p>
-      <button class="main__button">arrow</button>
-      <img class="main__img" src="./assets/paris.svg" alt="arrow">
-      <p> For over a year, I lived in exile, scraping by as I waited for the storm to pass. But Antwerp called me back,
-        and so I returned. My presses were spared, my name eventually cleared. Yet, even now, the shadows linger.</p>
-    </section>
+          <p>heritic</p>
+          <p>traitor</p>
+          <img class="paris__img" src="./assets/plantin_blue.svg" alt="press">
+          <img  src="./assets/plantin_red.svg" alt="press">
+        </div>
+        <p>I sit alone in my workshop, the smell of ink and parchment mingling with the faint chill of an Antwerp
+          evening.
+          My fingers trace the worn grooves of my printing press, the very tool that has shaped my life – and nearly
+          ended
+          it. The accusations still echo in my mind: Heretic, traitor. Words that burned hotter than the Spanish sun.
+        </p>
+        <p>It was not so long ago that I was forced to flee. A Calvinist pamphlet slipped unnoticed among my
+          publications.
+          The Spanish authorities were swift, unforgiving. I left Antwerp for Paris, leaving behind my presses, my
+          livelihood…my family.</p>
+        <p>run away</p>
+        <button class="main__button">arrow</button>
+        <img class="main__img" src="./assets/paris.svg" alt="arrow">
+        <p> For over a year, I lived in exile, scraping by as I waited for the storm to pass. But Antwerp called me
+          back,
+          and so I returned. My presses were spared, my name eventually cleared. Yet, even now, the shadows linger.</p>
+      </section>
 
-    <section class="main__content">
-      <h2 class="main__title">The weight of family</h2>
-      <p>I think of my daughters. Margaretha, Martine, Catharina, Magdalena, and Henrica. Each one a reminder of why I
-        must tread so carefully. What kind of future would they inherit if I dared to act against Spain? Their safety
-        weighs heavily on me, as does the memory of my son Christoffel, gone too soon. Family is everything. And yet, is
-        it enough to justify silence?</p>
-    </section>
+      <section class="section" id="family">
+        <h2 class="main__title">The weight of family</h2>
+        <img class="family__img" src="./assets/daughters.svg" alt="family">
+        <img class="family__img" src="./assets/daughter_blue.svg" alt="family">
+        <p>I think of my daughters. Margaretha, Martine, Catharina, Magdalena, and Henrica. Each one a reminder of why I
+          must tread so carefully. What kind of future would they inherit if I dared to act against Spain? Their safety
+          weighs heavily on me, as does the memory of my son Christoffel, gone too soon. Family is everything. And yet,
+          is
+          it enough to justify silence?</p>
+      </section>
 
-    <section>
-      <h2 class="main__title">A dangerous vision</h2>
-      <p>Then there is my craft. My presses hum with purpose, producing works that travel across the known world. Books
-        of faith, knowledge, and beauty. But what if…what if these same presses could be wielded as weapons? What if my
-        typefaces etched rebellion instead of reverence? Could I truly risk it? I imagine my presses dismantled,
-        smuggled north to the Netherlands or beyond, churning out words that could ignite a fire against Spanish rule. A
-        secret printing house, hidden in the shadows, where every page is a step closer to freedom. But would that
-        freedom come at too great a cost?</p>
-      <p>I glance at the locked chest in the corner of the room. Inside are drafts of pamphlets I dare not print. Not
-        yet. Words sharp as swords, dangerous as gunpowder. I tell myself it is caution that stays my hand, but deep
-        down, I know it is fear. Fear of what I could lose—and of what I could gain.</p>
-    </section>
+      <section class="section" id="workshop">
+        <h2 class="main__title" >A dangerous vision</h2>
+        <img class="workshop__img" src="./assets/eye_red.svg" alt="presses">
+        <img class="workshop__img" src="./assets/eye_blue.svg" alt="presses">
+        <p>Then there is my craft. My presses hum with purpose, producing works that travel across the known world.
+          Books
+          of faith, knowledge, and beauty. But what if…what if these same presses could be wielded as weapons? What if
+          my
+          typefaces etched rebellion instead of reverence? Could I truly risk it? I imagine my presses dismantled,
+          smuggled north to the Netherlands or beyond, churning out words that could ignite a fire against Spanish rule.
+          A
+          secret printing house, hidden in the shadows, where every page is a step closer to freedom. But would that
+          freedom come at too great a cost?</p>
+          <img class="workshop__img" src="./assets/print_blue.svg" alt="presses">
+          <img class="workshop__img" src="./assets/planet_red.svg" alt="presses">
+        <p>I glance at the locked chest in the corner of the room. Inside are drafts of pamphlets I dare not print. Not
+          yet. Words sharp as swords, dangerous as gunpowder. I tell myself it is caution that stays my hand, but deep
+          down, I know it is fear. Fear of what I could lose—and of what I could gain.</p>
+          <img class="workshop__img" src="./assets/paper_blue.svg" alt="presses">
+          <img class="workshop__img" src="./assets/paper_red.svg" alt="presses">
+      </section>
 
-    <section>
-      <h2>The silent echo</h2>
-      <p>The night deepens, and I am left with my thoughts. Tomorrow, the sun will rise, and with it, new decisions to
-        make. Will I risk everything to fight oppression? Or will I remain a loyal servant of the crown, the
-        Arch-Printer of Spain, safe but complicit?</p>
-      <p>The answer lies not in this room, but in the pages I leave behind. You must decide: did I dare to print the
-        unprintable? Did I take the leap from loyal printer to rebel with a press? Visit the Museum Plantin-Moretus to
-        uncover the truth of my story. My presses are silent now, but the echoes remain.</p>
-    </section>
-    <section>
-      <h2>Discover the secrets of Christophe Plantin’s printing house </h2>
-      <p>Was he a master craftsman or a master conspirator? Visit the Museum Plantin-Moretus in Antwerp and step into
-        the world of the 16th century’s most intriguing printer.</p>
-    </section>
+      <section class="section" id="answer">
+        <h2>The silent echo</h2>
+        <p>The night deepens, and I am left with my thoughts. Tomorrow, the sun will rise, and with it, new decisions to
+          make. Will I risk everything to fight oppression? Or will I remain a loyal servant of the crown, the
+          Arch-Printer of Spain, safe but complicit?</p>
+          <img class="answer__img" src="./assets/antwerp_blue.svg" alt="presses">
+          <img class="answer__img" src="./assets/antwerp_red.svg" alt="presses">
+        <p>The answer lies not in this room, but in the pages I leave behind. You must decide: did I dare to print the
+          unprintable? Did I take the leap from loyal printer to rebel with a press? Visit the Museum Plantin-Moretus to
+          uncover the truth of my story. My presses are silent now, but the echoes remain.</p>
+      </section>
+      <section>
+        <h2>Discover the secrets of Christophe Plantin’s printing house </h2>
+        <p>Was he a master craftsman or a master conspirator? Visit the Museum Plantin-Moretus in Antwerp and step into
+          the world of the 16th century’s most intriguing printer.</p>
+      </section>
 
-    <footer class="footer">
-      <h2>Museum Plantin-Moretus</h2>
-      <p>Vrijdagmarkt 22
+      <footer class="footer">
+        <h2>Museum Plantin-Moretus</h2>
+        <p>Vrijdagmarkt 22
 
-        2000 Antwerp
-        
-        Belgium</p>
+          2000 Antwerp
+
+          Belgium</p>
 
         <p>tel. +32 (0)3 221 14 50</p>
         <p>museum.plantin.moretus@antwerpen.be</p>
-
+  </div>
 </body>
 <script type="module" src="./main.js"></script>
 
