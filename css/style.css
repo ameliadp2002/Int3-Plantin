@@ -520,8 +520,161 @@ font-weight: 600;
  
   
 
+/*tablet*/
+@media screen and (min-width: 768px){
+  .header__title{
+    margin-left:40vh;
+    margin-top: -20vh;
+  }
 
-  @media screen and (min-width: 768px){
+  p{
+    font-size: var(--step-0);
+  }
+
+  .header__sub{
+    visibility: visible;
+    margin-left: 44vh;
+    margin-top: 2vh;
+    font-size: 1.5rem;
+  }
+
+  .header__button{
+    margin-top: -15vw;
+    margin-inline: 30vw;
+  }
+
+  .paris__intro h2{
+    font-size: 7rem;
+  }
+
+  .paris__intro p{
+    font-size: 5rem;
+    line-height: 5rem;
+    margin-left: 35vw;
+    margin-top: 30vh;
+  }
+
+  .paris__text{
+    width: 60vw;
+  }
+
+  .interaction{
+    margin-top: -20vh;
+  }
+
+  .eifeltoren{
+    margin-left: 50vw;
+  }
+
+  .interaction__call{
+    font-size: 6rem;
+  }
+
+  .paris__button{
+    margin-top: 20rem;
+    margin-left: 30vw;
+  }
+
+  .trapezoid{
+    height: 30vw;
+  }
+
+  .paris__outro{
+    width: 50vw;
+  }
+
+  .family{
+    margin-bottom: 0vw;
+    height: 50vh;
+  }
+
+  .family h2, .workshop h2{
+    font-size: 5rem;
+  }
+
+  .family__img--a{
+    height: 40vh;
+    margin-top: -5vh;
+    margin-left: 45vw;
+  }
+
+  .family__img--b{
+    height: 20vh;
+    margin-top: 20vw;
+    margin-left: 35vw;
+  }
+
+  .family__text{
+    margin-top: -30vh;
+    width: 50vw;
+    height: 30vh;
+  }
+
+  .workshop{
+    margin-top: 0vh;
+  }
+
+  .workshop__intro{
+    height: 40vh;
+  }
+
+  .workshop p{
+    width: 60vw;
+  }
+
+  .workshop__print{
+    margin-left: 60vw;
+    margin-top: -50vw;
+  }
+
+  .workshop__planet{
+    margin-left: 60vw;
+    margin-top: -40vw;
+  }
+
+  .workshop__text{
+    margin-top: -15vh;
+  }
+
+  .workshop__paper{
+    margin-left: -40vw;
+    margin-top: -5vh;
+  }
+
+  .answer h2{
+    font-size: 4rem;
+  }
+
+  .answer__intro{
+    width: 60vw;
+  }
+
+  .answer__img{
+    margin-top: -15vh;
+    margin-left: -10vw;
+  }
+
+  .anwser__outro{
+    margin-top: -1rem;
+    padding-left:40vw ;
+    padding-block: 4rem;
+  }
+
+  .cta h2{
+    font-size: 3rem;
+    line-height: 3.5rem;
+    width: 70vw;
+    margin-left: 5rem;
+  }
+  .cta p{
+    width: 60vw;
+    margin-left: 5rem;
+  }
+}
+
+
+/*computer*/
+  @media screen and (min-width: 1024px){
    
     .circle {
       --cursor-size: 150px;
