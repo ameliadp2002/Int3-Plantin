@@ -4,6 +4,15 @@
   --color-background:#F3F3F3;
   --color-black:#290500;
   --color-opacity:70%;
+
+  --step--2: clamp(0.6075rem, 0.4849rem + 0.613vw, 0.96rem);
+  --step--1: clamp(0.7294rem, 0.5657rem + 0.8185vw, 1.2rem);
+  --step-0: clamp(0.875rem, 0.6576rem + 1.087vw, 1.5rem);
+  --step-1: clamp(1.05rem, 0.763rem + 1.4348vw, 1.875rem);
+  --step-2: clamp(1.26rem, 0.883rem + 1.8848vw, 2.3438rem);
+  --step-3: clamp(1.5119rem, 1.0186rem + 2.4663vw, 2.93rem);
+  --step-4: clamp(1.8144rem, 1.1718rem + 3.213vw, 3.6619rem);
+  --step-5: clamp(2.1775rem, 1.3427rem + 4.1739vw, 4.5775rem);
 }
 
 html{
@@ -23,6 +32,11 @@ html{
     background-color: var(--color-background);
     overflow-x: hidden;
     font-family: "EB Garamond", serif;
+    font-size: var(--step-2);
+  }
+
+  .main p{
+    line-height: 1.7rem;
   }
 
   .container{
@@ -44,12 +58,20 @@ html{
     max-width: 100%;
     height: auto;
   }
+
+   /*text hightlight*/
+
+   p span{
+    color:var(--color-primary);
+    font-weight: 600;
+  }
   
 
   /*menu*/
   .menu{
+    z-index: 1000;
     position: fixed;
-    bottom: 0;
+    bottom: 0vh;
     width: 100%;
     padding: 24px;
     max-width: 100vw;
@@ -161,12 +183,13 @@ html{
   }
 
   /*paris*/
+  em{
+    font-style: italic;
+  }
+
   .paris{
     margin-top:5rem;
     padding-top: 5rem;
-    display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 50vh 40vh;
   }
 
   .paris__intro{
@@ -175,6 +198,7 @@ html{
     grid-template-rows: 100%;
 
     margin-left: -20vw;
+    margin-bottom: 2rem;
   }
 
   .paris__intro h2{
@@ -202,6 +226,115 @@ html{
   .paris__img{
     margin-left: -10vw;
   }
+
+  .paris__intro p{
+    grid-column: 1;
+    grid-row: 1;
+    rotate: -20deg;
+
+    z-index: 1;
+
+    font-size: 3rem;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 3rem;
+
+    margin-left:35vw;
+    margin-top: 22vh;
+  }
+
+  .paris__text{
+    margin-inline: 1.5rem;
+    width: 85vw;
+    margin-bottom: 2rem;
+  }
+
+  /*paris outro interaction*/
+ .interaction{
+  display:grid;
+  grid-template-columns:100vw;
+  grid-template-rows: 50vh 10vh;
+  margin-top: -10vh;
+  text-align: center;
+  align-items: center;
+
+ }
+
+  .trapezoid {
+    grid-column: 1;
+    grid-row: 3;
+    border-bottom: solid transparent;
+    border-Top: 15vh solid transparent;
+    border-left: 100vw solid rgb(44,197,244, 80%);
+    height: 70vw;
+    transform: scaleX(-1);
+  }
+
+  .eifeltoren{
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: -14vh;
+    margin-left:40vw ;
+    z-index: -10;
+    height: 80vh;
+  }
+
+  .paris__button{
+    grid-column: 1;
+    grid-row: 1;
+    height:15vh;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(244,46,10, 70%);
+    color: var(--color-background);
+
+    font-weight: 800;
+    font-size: 4rem;
+    margin-inline: 35vw;
+
+    margin-top: 15rem;
+    margin-left: 15vw;
+
+    width: 7rem;
+    height: 5rem;
+
+    rotate: 160deg;
+  }
+
+  .interaction__call{
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+    font-size: 4.5rem;
+    font-weight: 600;
+    font-style: italic;
+
+    rotate: -20deg;
+  }
+
+  .paris__outro{
+    grid-column: 1;
+    grid-row: 3;
+    z-index: 1;
+    margin-inline: 1.5rem;
+    text-align: left;
+    margin-top: 20vh;
+    margin-bottom: 5rem;
+  }
+
+  .paris__outro span{
+    color: var(--color-background);
+  }
+
+  /*family*/
+
+  
+
+  
+
+  
+
+ 
   
 
 
