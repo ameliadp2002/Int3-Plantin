@@ -1,7 +1,5 @@
 import './css/reset.css'
 import './css/style.css'
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const circleElement = document.querySelector('.circle');
 
