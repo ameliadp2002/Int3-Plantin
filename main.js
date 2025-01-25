@@ -3,8 +3,8 @@ import './css/style.css'
 
 const circleElement = document.querySelector('.circle');
 
-const mouse = { x: 0, y: 0 },
-      circle = { x: 0, y: 0 };
+let mouse = { x: 0, y: 0 };
+ let circle = { x: 0, y: 0 };
 
  const sections = [...document.querySelectorAll("section")];
 const getLinkById = (id) => document.querySelector(`a[href='#${id}']`);

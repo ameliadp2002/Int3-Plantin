@@ -1,14 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
     rel="stylesheet">
-  <title>plantin</title>
+  <title>Plantin</title>
 </head>
 
 <body>
@@ -30,22 +32,23 @@
           <img class="press" src="./assets/press_red.svg" alt="press">
         </div>
         <div class="header__text">
-          <h1 class="header__title">In the <span> print</span> <br> of the moment</h1>
+          <h1 class="header__title">In the  <em>print</em> <br> of the moment</h1>
           <p class="header__sub">Was he a master craftsman or a master conspirator?</p>
         </div>
         <a class="header__button" href="#paris">start</a>
+      </section>
     </header>
 
     <main class="main">
       <section class="section paris" id="paris">
         <div class="paris__intro">
-          <h2 class="main__title"><em>Shadows</em> of <br>the <em>past</em></h2>
+          <h2 class="main__title"><em class="em">Shadows</em> of <br>the <em>past</em></h2>
 
           <p>Heritic <br> Traitor</p>
           <img class="paris__img" src="./assets/plantin_blue.svg" alt="press">
           <img src="./assets/plantin_red.svg" alt="press">
         </div>
-        <p class="paris__text">I sit alone in my workshop, the smell of ink and parchment mingling with the faint chill
+        <p class="paris__text paris__text--a">I sit alone in my workshop, the smell of ink and parchment mingling with the faint chill
           of an <span>Antwerp
             evening</span>.
           My fingers trace the worn grooves of my printing press, the very tool that has shaped my life – and nearly
@@ -53,7 +56,7 @@
           it. The accusations still echo in my mind: <span>Heretic, traitor</span>. Words that burned hotter than the
           Spanish sun.
         </p>
-        <p class="paris__text">It was not so long ago that I was <span>forced to flee</span>. A Calvinist pamphlet
+        <p class="paris__text paris__text--b">It was not so long ago that I was <span>forced to flee</span>. A Calvinist pamphlet
           slipped unnoticed
           among my
           publications.
@@ -62,7 +65,7 @@
           livelihood…my family.</p>
 
         <div class="interaction">
-          <p class="interaction__call">run away</p>
+          <p class="interaction__call">Run away</p>
           <button class="paris__button">&#8592;</button>
           <div class="trapezoid"></div>
           <img class="eifeltoren" src="./assets/paris.svg" alt="arrow">
@@ -76,7 +79,7 @@
       </section>
 
       <section class="section family" id="family">
-        <h2 class="main__title">The weight<br> of <span>family</span></h2>
+        <h2 class="main__title">The weight<br> of <em>family</em></h2>
         <img class="family__img--a" src="./assets/daughters.svg" alt="family">
         <img class="family__img--b" src="./assets/daughter_blue.svg" alt="family">
         <p class="family__text">I think of <span>my daughters</span>. Margaretha, Martine, Catharina, Magdalena, and
@@ -90,7 +93,7 @@
 
       <section class="section workshop" id="workshop">
         <div class="workshop__intro">
-          <h2 class="workshop__title">A <em>dangerous</em> vision</h2>
+          <h2 class="workshop__title">A <em>Dangerous</em> vision</h2>
           <img class="workshop__img " src="./assets/eye_red.svg" alt="presses">
           <img class="workshop__img blue__eye" src="./assets/eye_blue.svg" alt="presses">
         </div>
@@ -115,6 +118,7 @@
             down, I know it is fear. Fear of what I could lose—and of what I could gain.</p>
           <img class="workshop__paper--a" src="./assets/paper_blue.svg" alt="presses">
           <img class="workshop__paper" src="./assets/paper_red.svg" alt="presses">
+          </div>
       </section>
 
       <section class="section answer" id="answer">
@@ -133,10 +137,13 @@
 
       <section class="cta">
         <img class=" cta__img" src="./assets/tapestry.svg" alt="presses">
+        <img class=" cta__img--b" src="./assets/tapestry.svg" alt="presses">
         <h2>Discover the secrets of Christophe Plantin’s printing house </h2>
         <p>Was he a master craftsman or a master conspirator? Visit the Museum Plantin-Moretus in Antwerp and step into
           the world of the 16th century’s most intriguing printer.</p>
       </section>
+
+    </main>
 
       <footer class="footer">
         <h2>Museum Plantin-Moretus</h2>
@@ -148,8 +155,10 @@
 
         <p>tel. +32 (0)3 221 14 50</p>
         <p>museum.plantin.moretus@antwerpen.be</p>
+        </footer>
   </div>
+  <script type="module" src="./main.js"></script>
 </body>
-<script type="module" src="./main.js"></script>
+
 
 </html>
