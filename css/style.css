@@ -524,7 +524,7 @@ font-weight: 600;
   
 
 /*tablet*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 650px){
   .header__title{
     margin-left:40vh;
     margin-top: -20vh;
@@ -692,9 +692,11 @@ font-weight: 600;
       pointer-events: none;  
     }
 
-    p{
+    p {
       font-size: var(--step--1);
     }
+
+    
 
     .menu{
       background-color: var(--color-background);
@@ -843,7 +845,7 @@ font-weight: 600;
 
     .paris__outro{
       grid-column: 2;
-      width: 40vw;
+      width: 30vw;
       margin-left: 10vw;
       margin-top: 20vh;
     }
@@ -988,4 +990,6 @@ font-weight: 600;
     .footer h2{
       font-size: 2rem;
     }
+
+    
   }

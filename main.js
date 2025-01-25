@@ -1,10 +1,12 @@
 import './css/reset.css'
 import './css/style.css'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const circleElement = document.querySelector('.circle');
 
 let mouse = { x: 0, y: 0 };
- let circle = { x: 0, y: 0 };
+let circle = { x: 0, y: 0 };
 
  const sections = [...document.querySelectorAll("section")];
 const getLinkById = (id) => document.querySelector(`a[href='#${id}']`);
