@@ -5,6 +5,48 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+let mm = gsap.matchMedia();
+
+mm.add("(max-width: 800px)", () => {
+  gsap.from(".eifeltoren", {
+    x:200,
+    duration: 4,
+    scrollTrigger: {
+      trigger: ".paris__text--a",
+      start: "top 70%",
+      end: "bottom 20%",
+      scrub: 0.5, //true
+    },
+  });
+
+  gsap.to(".plantin", {  
+    y: 1100,
+    x: -50,
+    duration: 6,
+    transform: "scale(0.4) rotate(-20deg)",
+    scrollTrigger: {
+      trigger: ".paris__text--b",
+      start: "top 70%",
+      end: "bottom 20%",
+      
+      scrub: 0.5, //true
+    },
+  });
+
+  gsap.from(".workshop__img", {
+    x:-200,
+    y: -100, 
+    transform: "rotate(-10deg)",
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".workshop",
+      start: "top 160%",
+      end: "bottom 100%",
+      scrub: 0.5, //true
+    },
+  });
+});
+
 gsap.to(".pilars", {
   x: -30,
   duration: 4,
@@ -63,30 +105,9 @@ gsap.to(".press", {
   },
 });
 
-gsap.to(".plantin", {  
-  y: 1100,
-  x: -50,
-  duration: 6,
-  transform: "scale(0.4) rotate(-20deg)",
-  scrollTrigger: {
-    trigger: ".paris__text--b",
-    start: "top 70%",
-    end: "bottom 20%",
-    
-    scrub: 0.5, //true
-  },
-});
 
-gsap.from(".eifeltoren", {
-  x:200,
-  duration: 4,
-  scrollTrigger: {
-    trigger: ".paris__text--a",
-    start: "top 70%",
-    end: "bottom 20%",
-    scrub: 0.5, //true
-  },
-});
+
+
 
 
 
@@ -103,18 +124,7 @@ gsap.from(".family__img--a", {
   },
 });
 
-gsap.from(".workshop__img", {
-  x:-200,
-  y: -100, 
-  transform: "rotate(-10deg)",
-  duration: 2,
-  scrollTrigger: {
-    trigger: ".workshop",
-    start: "top 160%",
-    end: "bottom 100%",
-    scrub: 0.5, //true
-  },
-});
+
 
 gsap.from(".antwerp", {
   x:70,
@@ -127,7 +137,6 @@ gsap.from(".antwerp", {
   },
 });
 
-let mm = gsap.matchMedia();
 
 mm.add("(min-width: 800px)", () => {
   gsap.to(".plantin", {  
@@ -210,6 +219,13 @@ const circle = { x: 0, y: 0 }; // Store the circle's position
 const speed = 0.15; // Speed factor for the follow animation
 const red1 = document.getElementById('red1');
 const red2 = document.getElementById('red2');
+const red3 = document.getElementById('red3');
+const red4 = document.getElementById('red4');
+const red5 = document.getElementById('red5');
+const red6 = document.getElementById('red6');
+const red7 = document.getElementById('red7');
+const red8 = document.getElementById('red8');
+
 
 window.addEventListener('mousemove', e => {
     mouse.x = e.x;
@@ -224,6 +240,13 @@ const circleFollowMouse = () => {
     // Add mask logic here
     BoxOverlap(red1);
     BoxOverlap(red2);
+    BoxOverlap(red3);
+    BoxOverlap(red4);
+    BoxOverlap(red5);
+    BoxOverlap(red6);
+    BoxOverlap(red7);
+    BoxOverlap(red8);
+  
   
 
     window.requestAnimationFrame(circleFollowMouse);

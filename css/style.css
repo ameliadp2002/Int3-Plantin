@@ -693,7 +693,7 @@ font-weight: 600;
       pointer-events: none;  
     }
 
-    #red1{
+    #red1 , #red2, #red3, #red4, #red5, #red6, #red7, #red8 {
       mask-image: radial-gradient(circle, black 100px, white 101px);
       -webkit-mask-image: radial-gradient(circle, black 100px, white 101px); /* For Safari */
       /* Optional additional properties */
@@ -702,14 +702,6 @@ font-weight: 600;
       mask-repeat: no-repeat;
   }
 
-  #red2{
-    mask-image: radial-gradient(circle, black 100px, white 101px);
-    -webkit-mask-image: radial-gradient(circle, black 100px, white 101px); /* For Safari */
-    /* Optional additional properties */
-    mask-size: cover;
-    mask-position: center;
-    mask-repeat: no-repeat;
-}
 
     p {
       font-size: var(--step--1);
@@ -720,7 +712,6 @@ font-weight: 600;
     .menu{
       background-color: var(--color-background);
         display: block;
-        height: 100vh;
         position: fixed;
         top: 100vh;
         transform: rotate(-90deg);
