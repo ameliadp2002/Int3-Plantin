@@ -3,6 +3,18 @@ import './css/style.css'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+let button = document.querySelector(".paris__button");
+let plantin = document.querySelector(".plantin");
+
+button.addEventListener("click", () => {
+  let isDesktop = window.innerWidth >= 1024;
+
+  gsap.to(plantin, {
+    x: isDesktop ? "-100vw" : "100vw", 
+    duration: 0.5
+  });
+});
+
 gsap.registerPlugin(ScrollTrigger);
 
 let mm = gsap.matchMedia();
@@ -19,8 +31,12 @@ mm.add("(max-width: 800px)", () => {
     },
   });
 
-  gsap.to(".plantin", {  
-    y: 1100,
+  gsap.to(".plantin", {
+    y: () => {
+      const startY = document.querySelector(".plantin").offsetTop;
+      const endY = document.querySelector(".trapezoid").offsetTop - 150;
+      return endY - startY; 
+    },
     x: -50,
     duration: 6,
     transform: "scale(0.4) rotate(-20deg)",
@@ -28,10 +44,11 @@ mm.add("(max-width: 800px)", () => {
       trigger: ".paris__text--b",
       start: "top 70%",
       end: "bottom 20%",
-      
-      scrub: 0.5, //true
-    },
+      scrub: true,               
+      //markers: true             
+    }
   });
+});
 
   gsap.from(".workshop__img", {
     x:-200,
@@ -45,7 +62,6 @@ mm.add("(max-width: 800px)", () => {
       scrub: 0.5, //true
     },
   });
-});
 
 gsap.to(".pilars", {
   x: -30,
@@ -81,9 +97,7 @@ gsap.to(".workshop__paper", {
 });
 
 
-
-
-gsap.to(".header__text", {
+gsap.to(".header__title", {
   x: -10,
   duration: 4,
   scrollTrigger: {
@@ -104,11 +118,6 @@ gsap.to(".press", {
     scrub: 0.5, //true
   },
 });
-
-
-
-
-
 
 
 
@@ -140,7 +149,11 @@ gsap.from(".antwerp", {
 
 mm.add("(min-width: 800px)", () => {
   gsap.to(".plantin", {  
-    y: 700,
+    y: () => {
+      const startY = document.querySelector(".plantin").offsetTop;
+      const endY = document.querySelector(".trapezoid").offsetTop - 300;
+      return endY - startY; 
+    },
     duration: 4,
     transform: "scale(0.5) rotate(-20deg)",
     scrollTrigger: {
@@ -177,6 +190,8 @@ mm.add("(min-width: 800px)", () => {
     },
   });
 });
+
+
 
 
 
