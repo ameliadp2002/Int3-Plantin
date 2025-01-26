@@ -10,7 +10,7 @@ button.addEventListener("click", () => {
   let isDesktop = window.innerWidth >= 1024;
 
   gsap.to(plantin, {
-    x: isDesktop ? "-100vw" : "100vw", 
+    x: isDesktop ? "-120vw" : "150vw", 
     duration: 0.5
   });
 });

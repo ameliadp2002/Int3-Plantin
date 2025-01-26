@@ -130,6 +130,13 @@ html{
     grid-template-rows: 50vh 40vh;
   }
 
+  .logo{
+    height: 10vh;
+    position: relative;
+    top:-70vh;
+    left: 75vw;
+  }
+
   .header__img{
     grid-row:1 ;
    display: grid;
@@ -287,23 +294,16 @@ html{
   .paris__button{
     grid-column: 1;
     grid-row: 1;
-    height:15vh;
-    text-align: center;
+    height:5vh;
     text-decoration: none;
-    background-color: rgb(244,46,10, 70%);
-    color: var(--color-background);
-
-    font-weight: 800;
-    font-size: 4rem;
+    border:none;
     margin-inline: 35vw;
+    background-color: rgb(0,0,0, 0%);
 
-    margin-top: 15rem;
+    margin-top: 60vh;
     margin-left: 15vw;
 
-    width: 7rem;
-    height: 5rem;
-
-    rotate: 160deg;
+    rotate: 180deg;
   }
 
   .interaction__call{
@@ -480,13 +480,19 @@ font-weight: 600;
   background-color: rgb(44,197,244, 80%);
 }
 
+.anwser__outro span{
+  color: var(--color-background);
+}
+
 /* calls to action*/
 .cta{
   margin-top: -5vh;
 }
 
 .cta img{
-  margin-bottom: 10vh;
+  rotate: 90deg;
+  margin-top: -20vh;
+  margin-bottom: -10vh;
 }
 
 .cta h2{
@@ -501,8 +507,15 @@ font-weight: 600;
   margin-inline: 1.5rem;
   margin-bottom: 5rem;
 }
+
 .cta__img--b{
+  height:0vh;
   visibility: hidden;
+}
+
+.cta a{
+  margin-left: 1rem;
+  padding-inline: 1rem;
 }
 
 /*footer*/
@@ -510,6 +523,7 @@ font-weight: 600;
 .footer{
   background-color: rgb(44,197,244, 80%);
   padding: 1.5rem;
+  margin-top: 4rem;
   padding-block: 5rem;
   padding-bottom: 10rem;
 }
@@ -533,6 +547,10 @@ font-weight: 600;
   .header__title{
     margin-left:40vh;
     margin-top: -20vh;
+  }
+
+  .logo{
+    top:-60vh;
   }
 
   p{
@@ -579,8 +597,8 @@ font-weight: 600;
   }
 
   .paris__button{
-    margin-top: 20rem;
-    margin-left: 30vw;
+    margin-top: 45vh;
+    margin-left: 10vw;
   }
 
   .trapezoid{
@@ -668,6 +686,11 @@ font-weight: 600;
     padding-block: 4rem;
   }
 
+  .cta img{
+    margin-top: -10vh;
+  }
+
+
   .cta h2{
     font-size: 3rem;
     line-height: 3.5rem;
@@ -676,6 +699,10 @@ font-weight: 600;
   }
   .cta p{
     width: 60vw;
+    margin-left: 5rem;
+  }
+
+  .cta a{
     margin-left: 5rem;
   }
 }
@@ -741,6 +768,11 @@ font-weight: 600;
       font-weight: 600;
     
       transition: opacity 200ms ease-in-out;
+    }
+
+    .logo{
+      top:-68vh;
+      left:85vw;
     }
 
     .header__content, .main{
@@ -856,15 +888,15 @@ font-weight: 600;
       grid-column: 2;
       grid-row: 2;
       font-size: 4rem;
-      margin-top: -30vh;
+      margin-top: -50vh;
       margin-left: 0vw;
     }
 
     .paris__button{
       grid-column: 2;
-      rotate: -20deg;
-      margin-bottom: -30vh;
-      margin-left: 10vw;
+      rotate: 0deg;
+      margin-bottom: -5vh;
+      margin-left: 5vw;
     }
 
     .paris__outro{
@@ -980,17 +1012,24 @@ font-weight: 600;
       padding-block: 5rem;
     }
 
-    .cta__img{
-      position: relative;
-      rotate: 90deg;
-      top:-20vh;
+    .cta img{
+      rotate: 0deg;
+    margin-top: -20vh;
+    margin-bottom: -10vh;
     }
 
+  
+
     .cta__img--b{
-      rotate: 180deg;
+      height: auto;
       visibility: visible;
-      margin-top: -20vh;
+
       margin-left: 75vw;
+  
+    }
+
+    .cta a{
+      margin-left: 2rem;
     }
 
     .cta h2{
