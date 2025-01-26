@@ -34,7 +34,7 @@ mm.add("(max-width: 800px)", () => {
   gsap.to(".plantin", {
     y: () => {
       const startY = document.querySelector(".plantin").offsetTop;
-      const endY = document.querySelector(".trapezoid").offsetTop - 150;
+      const endY = document.querySelector(".trapezoid").offsetTop - 100;
       return endY - startY; 
     },
     x: -50,

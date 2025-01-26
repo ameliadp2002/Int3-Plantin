@@ -82,8 +82,12 @@ html{
 
   .menu__list{
     display: flex;
+
+    font-size: var(--step-1);
     
-    justify-content: space-between;
+    justify-content: space-around;
+    padding-right: 2rem;
+    margin-left: -1rem;
     align-items: center;
   }
 
@@ -92,6 +96,7 @@ html{
     text-decoration: none;
     color: #040404;
     font-weight: 600;
+   
   
     transition: opacity 200ms ease-in-out;
     overflow: hidden;
@@ -726,7 +731,16 @@ font-weight: 600;
     .menu__list{
       display: flex;
       flex-flow: row-reverse;
-      justify-content: space-between;
+      justify-content: space-around;
+      padding-right: 2rem;
+    }
+
+    .menu__item {
+      text-decoration: none;
+      color: #040404;
+      font-weight: 600;
+    
+      transition: opacity 200ms ease-in-out;
     }
 
     .header__content, .main{
