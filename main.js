@@ -1,10 +1,106 @@
 import './css/reset.css'
 import './css/style.css'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const circleElement = document.querySelector('.circle');
+gsap.to(".pilars", {
+  x: -30,
+  duration: 4,
+  scrollTrigger: {
+    trigger: ".header__text",
+    start: "top 70%",
+    end: "bottom 20%",
+    scrub: 0.5, //true
+  },
+});
 
-let mouse = { x: 0, y: 0 };
-let circle = { x: 0, y: 0 };
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".header__text", {
+  x: -10,
+  duration: 4,
+  scrollTrigger: {
+    trigger: ".header__text",
+    start: "top 70%",
+    end: "bottom 20%",
+    scrub: 0.5, //true
+  },
+});
+
+gsap.to(".press", {
+  x: 30,
+  duration: 4,
+  scrollTrigger: {
+    trigger: ".header__text",
+    start: "top 70%",
+    end: "bottom 20%",
+    scrub: 0.5, //true
+  },
+});
+
+gsap.to(".plantin", {  
+  y: 700,
+  duration: 4,
+  transform: "scale(0.5) rotate(-20deg)",
+  scrollTrigger: {
+    trigger: ".paris__text--b",
+    start: "top 70%",
+    end: "bottom 20%",
+    
+    scrub: 0.5, //true
+  },
+});
+
+gsap.from(".eifeltoren", {
+  x:-200,
+  transform: "rotate(-40deg)",
+  duration: 4,
+  scrollTrigger: {
+    trigger: ".paris__text--a",
+    start: "top 70%",
+    end: "bottom 20%",
+    scrub: 0.5, //true
+  },
+});
+
+gsap.from(".family__img--a", {
+  x:200,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".paris__outro",
+    start: "top 70%",
+    end: "bottom 20%",
+    scrub: 0.5, //true
+  },
+});
+
+gsap.from(".workshop__img", {
+  x:-700,
+  y: -200, 
+  transform: "rotate(-20deg)",
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".workshop",
+    start: "top 150%",
+    end: "bottom 100%",
+    scrub: 0.5, //true
+  },
+});
+
+gsap.from(".antwerp", {
+  x:70,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".answer",
+    start: "top 70%",
+    end: "bottom 40%",
+    scrub: 0.5, //true
+  },
+});
+
+
+
 
  const sections = [...document.querySelectorAll("section")];
 const getLinkById = (id) => document.querySelector(`a[href='#${id}']`);
@@ -38,20 +134,52 @@ window.onscroll = () => {
   });
 };
 
+const circleElement = document.getElementById('circle'); // Select the circle element
+const mouse = { x: 0, y: 0 }; // Store the current mouse position
+const circle = { x: 0, y: 0 }; // Store the circle's position
+const speed = 0.15; // Speed factor for the follow animation
+const red1 = document.getElementById('red1');
+const red2 = document.getElementById('red2');
+
 window.addEventListener('mousemove', e => {
-  mouse.x = e.x;
-  mouse.y = e.y;
+    mouse.x = e.x;
+    mouse.y = e.y;
 });
 
-const speed = 0.15;
+const circleFollowMouse = () => {
+    circle.x += (mouse.x - circle.x) * speed;
+    circle.y += (mouse.y - circle.y) * speed;
+    circleElement.style.transform = `translate(${circle.x}px, ${circle.y}px)`;
 
-const tick = () => {
-  circle.x += (mouse.x - circle.x) * speed;
-  circle.y += (mouse.y - circle.y) * speed;
+    // Add mask logic here
+    BoxOverlap(red1);
+    BoxOverlap(red2);
+  
 
-  circleElement.style.transform = `translate(${circle.x}px, ${circle.y}px)`;
-
-  window.requestAnimationFrame(tick);
+    window.requestAnimationFrame(circleFollowMouse);
 }
 
-tick();
+const BoxOverlap = (box) => {
+    const boxRect = box.getBoundingClientRect();
+
+    const maskX = circle.x - boxRect.left;
+    const maskY = circle.y - boxRect.top;
+
+    const isOverlapping = !(
+        circle.x < boxRect.left ||
+        circle.x > boxRect.right ||
+        circle.y < boxRect.top ||
+        circle.y > boxRect.bottom
+    );
+
+    if (isOverlapping) {
+        box.style.maskImage = `radial-gradient(circle 100px at ${maskX + 10}px ${maskY + 1}px, transparent 100%, black 101%)`;
+        box.style.WebkitMaskImage = `radial-gradient(circle 100px at ${maskX + 1}px ${maskY + 1}px, transparent 100%, black 101%)`;
+    } else {
+        box.style.maskImage = 'none';
+        box.style.WebkitMaskImage = 'none';
+    }
+}
+
+
+circleFollowMouse();

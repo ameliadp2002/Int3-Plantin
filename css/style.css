@@ -680,7 +680,8 @@ font-weight: 600;
   @media screen and (min-width: 1024px){
 
     .circle {
-      --cursor-size: 150px;
+      z-index: 999;
+      --cursor-size: 200px;
       position: fixed;
       width: var(--cursor-size);
       height: var(--cursor-size);
@@ -691,6 +692,24 @@ font-weight: 600;
       left: calc(-1 * var(--cursor-size) / 2);
       pointer-events: none;  
     }
+
+    #red1{
+      mask-image: radial-gradient(circle, black 100px, white 101px);
+      -webkit-mask-image: radial-gradient(circle, black 100px, white 101px); /* For Safari */
+      /* Optional additional properties */
+      mask-size: cover;
+      mask-position: center;
+      mask-repeat: no-repeat;
+  }
+
+  #red2{
+    mask-image: radial-gradient(circle, black 100px, white 101px);
+    -webkit-mask-image: radial-gradient(circle, black 100px, white 101px); /* For Safari */
+    /* Optional additional properties */
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat;
+}
 
     p {
       font-size: var(--step--1);
