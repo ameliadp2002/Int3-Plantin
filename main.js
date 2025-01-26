@@ -3,8 +3,32 @@ import './css/style.css'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
+let mm = gsap.matchMedia();
+
+//interaction running to paris
 let button = document.querySelector(".paris__button");
 let plantin = document.querySelector(".plantin");
+
+//menu elements
+const sections = [...document.querySelectorAll("section")];
+const getLinkById = (id) => document.querySelector(`a[href='#${id}']`);
+
+//looking glass
+const circleElement = document.getElementById('circle'); // Select the circle element
+const mouse = { x: 0, y: 0 }; // Store the current mouse position
+const circle = { x: 0, y: 0 }; // Store the circle's position
+const speed = 0.15; // Speed factor for the follow animation
+const red1 = document.getElementById('red1');
+const red2 = document.getElementById('red2');
+const red3 = document.getElementById('red3');
+const red4 = document.getElementById('red4');
+const red5 = document.getElementById('red5');
+const red6 = document.getElementById('red6');
+const red7 = document.getElementById('red7');
+const red8 = document.getElementById('red8');
+
+
 
 button.addEventListener("click", () => {
   let isDesktop = window.innerWidth >= 1024;
@@ -15,9 +39,8 @@ button.addEventListener("click", () => {
   });
 });
 
-gsap.registerPlugin(ScrollTrigger);
 
-let mm = gsap.matchMedia();
+
 
 mm.add("(max-width: 800px)", () => {
   gsap.from(".eifeltoren", {
@@ -194,10 +217,7 @@ mm.add("(min-width: 800px)", () => {
 
 
 
-
-
- const sections = [...document.querySelectorAll("section")];
-const getLinkById = (id) => document.querySelector(`a[href='#${id}']`);
+//menu
 const inView = (section) => {
   let top = section.offsetTop;
   let height = section.offsetHeight;
@@ -228,20 +248,10 @@ window.onscroll = () => {
   });
 };
 
-const circleElement = document.getElementById('circle'); // Select the circle element
-const mouse = { x: 0, y: 0 }; // Store the current mouse position
-const circle = { x: 0, y: 0 }; // Store the circle's position
-const speed = 0.15; // Speed factor for the follow animation
-const red1 = document.getElementById('red1');
-const red2 = document.getElementById('red2');
-const red3 = document.getElementById('red3');
-const red4 = document.getElementById('red4');
-const red5 = document.getElementById('red5');
-const red6 = document.getElementById('red6');
-const red7 = document.getElementById('red7');
-const red8 = document.getElementById('red8');
 
 
+
+// the looking glass
 window.addEventListener('mousemove', e => {
     mouse.x = e.x;
     mouse.y = e.y;
@@ -261,7 +271,6 @@ const circleFollowMouse = () => {
     BoxOverlap(red6);
     BoxOverlap(red7);
     BoxOverlap(red8);
-  
   
 
     window.requestAnimationFrame(circleFollowMouse);
