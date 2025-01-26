@@ -3,6 +3,8 @@ import './css/style.css'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
+
 gsap.to(".pilars", {
   x: -30,
   duration: 4,
@@ -14,8 +16,30 @@ gsap.to(".pilars", {
   },
 });
 
+gsap.to(".workshop__paper--a", {
+  x: 30,
+  duration: 4,
+  scrollTrigger: {
+    trigger: ".workshop__text",
+    start: "top 70%",
+    end: "bottom 20%",
+    scrub: 0.5, //true
+  },
+});
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.to(".workshop__paper", {
+  x: 60,
+  duration: 4,
+  scrollTrigger: {
+    trigger: ".workshop__text",
+    start: "top 70%",
+    end: "bottom 20%",
+    scrub: 0.5, //true
+  },
+});
+
+
+
 
 gsap.to(".header__text", {
   x: -10,
@@ -40,9 +64,10 @@ gsap.to(".press", {
 });
 
 gsap.to(".plantin", {  
-  y: 700,
-  duration: 4,
-  transform: "scale(0.5) rotate(-20deg)",
+  y: 1100,
+  x: -50,
+  duration: 6,
+  transform: "scale(0.4) rotate(-20deg)",
   scrollTrigger: {
     trigger: ".paris__text--b",
     start: "top 70%",
@@ -53,8 +78,7 @@ gsap.to(".plantin", {
 });
 
 gsap.from(".eifeltoren", {
-  x:-200,
-  transform: "rotate(-40deg)",
+  x:200,
   duration: 4,
   scrollTrigger: {
     trigger: ".paris__text--a",
@@ -63,6 +87,10 @@ gsap.from(".eifeltoren", {
     scrub: 0.5, //true
   },
 });
+
+
+
+
 
 gsap.from(".family__img--a", {
   x:200,
@@ -76,13 +104,13 @@ gsap.from(".family__img--a", {
 });
 
 gsap.from(".workshop__img", {
-  x:-700,
-  y: -200, 
-  transform: "rotate(-20deg)",
+  x:-200,
+  y: -100, 
+  transform: "rotate(-10deg)",
   duration: 2,
   scrollTrigger: {
     trigger: ".workshop",
-    start: "top 150%",
+    start: "top 160%",
     end: "bottom 100%",
     scrub: 0.5, //true
   },
@@ -97,6 +125,48 @@ gsap.from(".antwerp", {
     end: "bottom 40%",
     scrub: 0.5, //true
   },
+});
+
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 800px)", () => {
+  gsap.to(".plantin", {  
+    y: 700,
+    duration: 4,
+    transform: "scale(0.5) rotate(-20deg)",
+    scrollTrigger: {
+      trigger: ".paris__text--b",
+      start: "top 70%",
+      end: "bottom 20%",
+      
+      scrub: 0.5, //true
+    },
+  });
+
+  gsap.from(".eifeltoren", {
+    x:-200,
+    transform: "rotate(-40deg)",
+    duration: 4,
+    scrollTrigger: {
+      trigger: ".paris__text--a",
+      start: "top 70%",
+      end: "bottom 20%",
+      scrub: 0.5, //true
+    },
+  });
+
+  gsap.from(".workshop__img", {
+    x:-700,
+    y: -200, 
+    transform: "rotate(-20deg)",
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".workshop",
+      start: "top 150%",
+      end: "bottom 100%",
+      scrub: 0.5, //true
+    },
+  });
 });
 
 
@@ -181,5 +251,14 @@ const BoxOverlap = (box) => {
     }
 }
 
+const isDesktop = () => {
+  return window.matchMedia("(min-width: 1024px)").matches;
+};
 
-circleFollowMouse();
+if (isDesktop()) {
+  circleFollowMouse();
+}
+
+  
+
+
